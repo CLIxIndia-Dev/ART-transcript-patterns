@@ -173,14 +173,20 @@ p {
 }
 
 
-/*ANSWER LINK TRANSCRIPT WRAPPER*/
-.art-nav {
+/*MEDIA TRANSCRIPT WRAPPER*/
+.media-nav {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1em;
 }
 
 
+.container--has-focus {
+  *:focus {
+    outline: solid DodgerBlue 3px;
+    outline-offset: 2px;
+  }
+}
 
 
 /*SELECT ANSWER LINK*/
@@ -238,71 +244,56 @@ p {
   fill: currentColor;
 }
 
+.transcript-icon:focus {
+  fill: currentColor;
+}
+
 .transcript-icon:active {
   fill: currentColor;
 }
 
-.toggle-me {
+.transcript-toggle {
   display: flex;
   align-items: center;
   width: 8em;
   height: 30px;
   margin: 0;
   padding: 0 1em 0 0.5em;
-  background-color: #fff;
-  border-top: 2px solid hsla(259, 40%, 40%, 0);
-  border-bottom: 2px solid hsla(259, 40%, 40%, 0);
+  background: #fff;
+  border-top-width: 2px;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: hsla(259, 40%, 40%, 0);
+  border-radius: 0;
   color: #777;
   cursor: pointer;
-  font-size: 0.625em;
+  font-size: 0.75rem;
 }
 
-.toggle-me:hover {
+.transcript-toggle:hover {
   color: hsla(259, 40%, 40%, 1);
-  border-top: 2px solid hsla(259, 40%, 40%, 1);
-  border-bottom: 2px solid hsla(259, 40%, 40%, 0);
+  border-top-color: hsla(259, 40%, 40%, 1);
 }
 
-.toggle-me:active {
-  color: hsla(316, 77%, 37%, 1);
-  border-top: 2px solid hsla(316, 77%, 37%, 1);
-  border-bottom: 2px solid hsla(316, 77%, 37%, 0);
+.transcript-toggle:focus {
+  color: #fff;
+  background: radial-gradient(hsla(259, 40%, 40%, 1), hsla(259, 40%, 30%, 1));
+  outline: 2px dotted #573d8f;
+  outline-offset: 0.3em;
+  z-index: 1;
 }
 
-.toggle-me > span {
+.transcript-toggle:active {
+  /*color: hsla(316, 77%, 37%, 1);
+  border-top-color: hsla(316, 77%, 37%, 1);*/
+  color: #fff;
+  background: radial-gradient(hsla(327, 100%, 45%, 1), hsla(327, 100%, 35%, 1));
+}
+
+.transcript-toggle > span {
   padding-left: 0.15em;
-}
-
-
-/*TOGGLE INPUT*/
-#toggler ~ .transcript,
-#toggler01 ~ .transcript,
-#toggler02 ~ .transcript,
-#toggler03 ~ .transcript  {
-  height: 0;
-  padding: 0 0 10px;
-  display: none;
-  border-bottom: 2px solid #ddd;
-  opacity: 0;
-  overflow-y: scroll;
-  transition: all 0.5s ease-in-out;
-}
-
-#toggler:checked ~ .transcript,
-#toggler01:checked ~ .transcript,
-#toggler02:checked ~ .transcript,
-#toggler03:checked ~ .transcript  {
-  height: 100%;
-  display: block;
-  opacity: 1;
-}
-
-
-#toggler:checked ~ .arrow-toggle,
-#toggler01:checked ~ .arrow-toggle,
-#toggler02:checked ~ .arrow-toggle,
-#toggler03:checked ~ .arrow-toggle {
-  transform: rotate(90deg);
 }
 
 
