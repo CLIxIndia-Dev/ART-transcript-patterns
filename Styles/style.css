@@ -6,7 +6,7 @@
 @import './base/fonts.css' screen;
 
 
-/*import this for videojs*/
+/*import these two for videojs theming*/
 @import './base/video-js.min.css' screen;
 @import './base/videojs-skin-colors.css' screen;
 
@@ -223,8 +223,7 @@ figure {
 
 .transcript-toggle:active {
   color: #fff;
-  background: radial-gradient(hsla(327, 100%, 45%, 1), hsla(327, 100%, 35%, 1));
-  border-top-color: hsla(327, 100%, 25%, 1);
+  background: radial-gradient(hsla(259, 40%, 40%, 1), hsla(259, 40%,30%, 1));
 }
 
 .transcript-toggle > span {
