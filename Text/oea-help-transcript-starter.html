@@ -11,44 +11,44 @@
   <script src="../Misc/photo-zoom.js" type="text/javascript" charset="utf-8"></script>
   <script src="../Misc/video.js" type="text/javascript" charset="utf-8"></script>
   <script src="../Misc/assess-sizer.js" type="text/javascript"></script>
+  <script src="../Misc/transcript-toggle.js" type="text/javascript"></script>
 </head>
 <body>
+  <main class="cntrd span_10_of_12">
+    <!-- begin video w transcript section -->
+    <h2>H2 heading. And video example.</h2>
+    <section class="group">
+      <article class="tbd">
+        <div class="vidbak">
+          <video id="ee_U01LO1A01Q01_vid01" class="video-js vjs-skin-colors-clix vjs-big-play-centered" controls="controls" preload="auto" width="480" height="360" data-setup='{ "playbackRates": [0.5, 1, 1.5, 2] }'>
+            <source src="../Video/video-js-test.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' crossorigin="anonymous"/>
 
+            <track kind="captions" src="../Video/video-js-test-en.vtt" srclang="en" label="English" type="text/vtt"/>
 
-  <h2>H2 heading. And video example.</h2>
+            <track kind="captions" src="../Video/video-js-test-hi.vtt" srclang="hi" label="Hindi" type="text/vtt"/>
 
-  <section class="group">
-    <article class="tbd">
-      <div class="vidbak">
-        <video id="ee_U01LO1A01Q01_vid01" class="video-js vjs-skin-colors-clix vjs-big-play-centered" controls="controls" preload="auto" width="480" height="360" data-setup='{ "playbackRates": [0.5, 1, 1.5, 2] }'>
-          <source src="../Video/video-js-test.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' crossorigin="anonymous"/>
+            <track kind="captions" src="../Video/video-js-test-te.vtt" srclang="te" label="Telugu" type="text/vtt"/>
 
-          <track kind="captions" src="../Video/video-js-test-en.vtt" srclang="en" label="English" type="text/vtt"/>
+            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video</p>
+          </video>
+        </div>
 
-          <track kind="captions" src="../Video/video-js-test-hi.vtt" srclang="hi" label="Hindi" type="text/vtt"/>
+    <!-- begin required transcript block -->
+        <div class="media-nav container">
+          <button aria-expanded="false" class="transcript-toggle">
+            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+            <svg aria-hidden="true" focusable="false" class="transcript-icon" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="drive-document" class="transcript-icon">
+                        <path d="M16,0 L2,0 C0.9,0 0,0.9 0,2 L0,16 C0,17.1 0.9,18 2,18 L16,18 C17.1,18 18,17.1 18,16 L18,2 C18,0.9 17.1,0 16,0 L16,0 Z M14,6 L4,6 L4,4 L14,4 L14,6 L14,6 Z M14,10 L4,10 L4,8 L14,8 L14,10 L14,10 Z M11,14 L4,14 L4,12 L11,12 L11,14 L11,14 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </svg>
+            <span>Transcript</span>
+          </button>
+        </div>
 
-          <track kind="captions" src="../Video/video-js-test-te.vtt" srclang="te" label="Telugu" type="text/vtt"/>
-
-          <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video</p>
-        </video>
-      </div>
-
-  <!-- begin required transcript section -->
-        <label for="toggler01" class="toggle-me">
-          <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-          <svg class="transcript-icon" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <g id="drive-document" class="transcript-icon">
-                      <path d="M16,0 L2,0 C0.9,0 0,0.9 0,2 L0,16 C0,17.1 0.9,18 2,18 L16,18 C17.1,18 18,17.1 18,16 L18,2 C18,0.9 17.1,0 16,0 L16,0 Z M14,6 L4,6 L4,4 L14,4 L14,6 L14,6 Z M14,10 L4,10 L4,8 L14,8 L14,10 L14,10 Z M11,14 L4,14 L4,12 L11,12 L11,14 L11,14 Z" id="Shape"></path>
-                  </g>
-              </g>
-          </svg>
-          <span>Transcript</span>
-        </label>
-      <!-- </div> -->
-      <form class="trans-form">
-        <input type="checkbox" id="toggler01" class="visuallyhidden" />
-        <article class="transcript">
+        <div class="transcript" hidden>
           <h3>Transcript</h3>
 
           <p><em>Sound of bus stopping at station</em></p>
@@ -57,23 +57,15 @@
 
           <p><strong>Zo:</strong> Oh, okay. I will get my bag and get down from this bus. Thank you, conductor. Bye.</p>
 
-          <p><em>Zo gets down from the bus and Kanasu on her cycle comes crashing into him.</em></p>
-
-          <p><strong>Zo:</strong> <em>(surprised and in pain)</em> Owww! Can’t you see where you are going?</p>
-
           <p><strong>Kanasu:</strong> <em>(equally surprised)</em> You did not see where you are going! Look at what you have done to my cycle! The handle bar is all bent.</p>
 
-          <p><strong>Zo:</strong> Look at what you have done to me! My elbows are bruised.</p>
-
           <p><em>Sahir sees this scuffle and walks towards them.</em></p>
+        </div>
+        <!-- end required transcript block -->
 
-          <p><strong>Sahir:</strong> Kanasu, are you okay?</p>
-        </article>
-      </form>
-    </article>
-<!-- end required transcript section -->
-  </section>
-
-
+      </article>
+    </section>
+    <!-- end video w transcript section -->
+  </main>
 </body>
 </html>
