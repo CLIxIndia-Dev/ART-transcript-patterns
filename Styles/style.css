@@ -13,6 +13,8 @@
 
 /*FLEXBOX*/
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -119,8 +121,12 @@ figure {
 
 /*MEDIA TRANSCRIPT WRAPPER*/
 .media-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 1em;
 }
 
@@ -130,9 +136,17 @@ figure {
   width: 110px;
   height: 30px;
   padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-radial-gradient(hsla(316, 77%, 37%, 1), hsla(316, 88%, 26%, 1));
+  background: -o-radial-gradient(hsla(316, 77%, 37%, 1), hsla(316, 88%, 26%, 1));
   background: radial-gradient(hsla(316, 77%, 37%, 1), hsla(316, 88%, 26%, 1));
   border: none;
   border-radius: 0 0 5px 5px;
@@ -148,24 +162,36 @@ figure {
 
 .audio-select:hover {
   color: #fff;
+  background: -webkit-radial-gradient(hsla(316, 77%, 26%, 1), hsla(316, 88%, 15%, 1));
+  background: -o-radial-gradient(hsla(316, 77%, 26%, 1), hsla(316, 88%, 15%, 1));
   background: radial-gradient(hsla(316, 77%, 26%, 1), hsla(316, 88%, 15%, 1));
 }
 
 .audio-select:focus {
   color: #fff;
+  background: -webkit-radial-gradient(hsla(316, 77%, 26%, 1), hsla(316, 88%, 15%, 1));
+  background: -o-radial-gradient(hsla(316, 77%, 26%, 1), hsla(316, 88%, 15%, 1));
   background: radial-gradient(hsla(316, 77%, 26%, 1), hsla(316, 88%, 15%, 1));
 }
 
 .audio-select:active {
   color: #fff;
+  background: -webkit-radial-gradient(#f37f2f, #f54b32);
+  background: -o-radial-gradient(#f37f2f, #f54b32);
   background: radial-gradient(#f37f2f, #f54b32);
 }
 
 .arrow-toggle {
   color: #fff;
   fill: currentColor;
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
   transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 
@@ -191,8 +217,12 @@ figure {
 }
 
 .transcript-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 8em;
   height: 30px;
   margin: 0;
@@ -223,6 +253,8 @@ figure {
 
 .transcript-toggle:active {
   color: #fff;
+  background: -webkit-radial-gradient(hsla(259, 40%, 40%, 1), hsla(259, 40%,30%, 1));
+  background: -o-radial-gradient(hsla(259, 40%, 40%, 1), hsla(259, 40%,30%, 1));
   background: radial-gradient(hsla(259, 40%, 40%, 1), hsla(259, 40%,30%, 1));
 }
 
